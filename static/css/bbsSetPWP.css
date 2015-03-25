@@ -1,0 +1,67 @@
+
+body {
+	background-image: url(../img/form_bg.png);
+	background-repeat:no-repeat;
+ 	background-position:340px 90px;
+ 	background-color: #eee;
+ 	background-size: 680px 480px;
+}
+
+.logo {
+	position: absolute;
+	top: 40px;left: 40px;
+}
+
+.main {
+	position: absolute;
+	width: 275px;height: 300px;
+	top: 50%;left: 50%;
+	margin-top: -190px;margin-left: -140px;
+}
+
+.main input {
+	margin-top: 5px;margin-bottom: 5px;
+}
+
+.main p {
+	padding: 5px;
+}
+
+.main .title {
+	font-size: 20px;
+	padding: 10px;
+	font-weight: bold;
+}
+
+.link a {
+	color: #444;
+}
+
+.link a:hover {
+	font-weight: bold;
+}
+
+.left {
+	width: 100px;
+	float: left;
+}
+
+.right {
+	width: 100px;
+	text-align: right;
+	float: right;
+}
+
+.foot {
+	position: absolute;
+	bottom: 0;
+}
+
+
+
+
+
+
+
+
+

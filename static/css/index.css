@@ -1,0 +1,116 @@
+body {
+	background: url(../img/index_bg.png);
+}
+
+.middle {
+	width: 1050px;
+	margin: 0 auto;
+}
+
+h1{
+	font-family: "Microsoft YaHei";
+	font-size: 80px;
+}
+
+.barberShop {
+	color: blue;
+}
+
+/*-------------------*/
+
+.neck {
+	width: 700px;height: 60px;
+	line-height: 60px;
+	background-color: #777;
+	margin: 15px 0;
+}
+
+.neck a {
+	margin: 0 20px;
+	color: #444;
+	font-size: 20px;
+	transition:all 300ms ease;
+}
+
+.neck a:hover {
+	color: #222;
+	font-weight: bold;
+	border-bottom: 4px solid #444;
+}
+
+.main {
+	margin-top: 45px;
+}
+
+.handler {
+	width: 500px;
+	float: left;
+}
+
+.handler a {
+	display: block;
+	width: 200px;height: 120px;
+	text-align: center;
+	line-height: 120px;
+	background-color: #777;
+	color: #aaa;
+	font-size: 25px;
+	transition:all 300ms ease;
+}
+
+.handler a:hover {
+	background-color: #444;
+	color: #ccc;
+}
+
+.recommend {
+	width: 350px;height: 250px;
+	float: right;
+	margin-top: 150px;
+}
+
+.recommend .title {
+	background-color: #777;
+	opacity: 0.7;
+	border-radius: 10px 10px 0 0;
+	height: 50px;
+	font-family: "Microsoft YaHei";
+	line-height: 50px;
+	padding-left: 15px;
+}
+
+.recommend td,th {
+	padding: 10px;
+	border: 1px solid #777;
+	font-family: "Microsoft YaHei";
+}
+
+.recommend td:hover {
+	background-color: #888;
+}
+
+
+.bbsshow {
+	height: 220px;
+	border: 1px solid #777;
+	overflow-y: scroll;
+}
+
+.bbsshow table {
+	width: 100%;
+}
+
+/*-------------------*/
+
+.foot {
+	text-align: center;
+	margin-top: 20px;
+}
+
+
+
+
+
+
+
+

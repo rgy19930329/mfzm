@@ -1,0 +1,67 @@
+body {
+	background: #eee;
+}
+
+a {
+	font-family: "Microsoft YaHei";
+	text-decoration: none;
+	color: blue;
+}
+
+p {
+	font-family: "Microsoft YaHei";
+}
+
+input[type="text"],input[type="password"] {
+	width: 250px;
+	font-family: "Microsoft YaHei";
+	font-size: 20px;
+	padding: 5px 10px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+input[type="button"],input[type="submit"] {
+	width: 274px;height: 45px;
+	font-family: "Microsoft YaHei";
+	font-size: 20px;
+	background: #5599FF;
+	border: none;
+	cursor: pointer;
+	transition:all 300ms ease;
+}
+
+input[type="button"]:hover,input[type="submit"]:hover {
+	background: #5577FF;
+}
+
+
+iframe {
+	width: 100%;height: 70px;
+	border: none;
+}
+
+
+td,th {
+	padding: 10px;
+	border: 1px solid #777;
+	font-family: "Microsoft YaHei";
+}
+
+th {
+	font-weight: bold;
+}
+
+td:hover {
+	background-color: #888;
+}
+
+
+
+
+
+
+
+
+
+
