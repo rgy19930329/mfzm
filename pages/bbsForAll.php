@@ -49,9 +49,6 @@
 		</div>
 	</div>
 
-
-<?php include("Lib.php") ?>
-
 <?php
 	$sql = "SELECT userID, userName, allRecharge FROM userinfo_tb WHERE bbsID='$bbsID' ORDER BY allRecharge desc";
 	$result = mysql_query($sql);

@@ -1,17 +1,6 @@
-<?php ob_start(); ?>
-<!DOCTYPE html>
-<html>
-<head>
 <meta charset="utf-8">
-<title>会员充值</title>
-<style type="text/css">
+<?php ob_start(); ?>
 
-
-
-
-</style>
-</head>
-<body>
 <?php 
 	session_start();
 	$bbsLoginFlag = null;
@@ -77,24 +66,6 @@
 		$result = "亲爱的用户：".$userName."，您已充值".$amount."元，当前账户余额：".$currentAmount."元";
 		echo "<script>alert('$result');location.href='userLogin.php';</script>";
 	}
-
 ?>	
 	
-</body>
-</html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
