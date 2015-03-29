@@ -69,6 +69,15 @@
 				</p>
 
 				<p><input type="password" name="bbsPW" id="bbsPW" maxlength="20" placeholder="设置密码"></p>
+				<p>
+					<table class="pwpower">
+						<tr>
+							<td id="strength_L" >弱</td>    
+            				<td id="strength_M" >中</td>    
+            				<td id="strength_H" >强</td>
+						</tr>
+					</table>
+				</p>
 				<p><input type="password" name="bbsPWInsure" id="bbsPWInsure" maxlength="20" placeholder="密码确认"></p>
 			</div>
 			
@@ -143,6 +152,91 @@ function check(){
 }
 
 </script>
+
+<script type="text/javascript">    
+//判断输入密码的类型    
+function CharMode(iN) {
+		if (iN >= 48 && iN <= 57) //数字    
+			return 1;
+		if (iN >= 65 && iN <= 90) //大写    
+			return 2;
+		if (iN >= 97 && iN <= 122) //小写    
+			return 4;
+		else
+			return 8;
+	}
+//bitTotal函数    
+//计算密码模式    
+function bitTotal(num) {
+		modes = 0;
+		for (i = 0; i < 4; i++) {
+			if (num & 1) modes++;
+			num >>>= 1;
+		}
+		return modes;
+	}
+//返回强度级别    
+function checkStrong(sPW) {
+	if (sPW.length < 6)
+		return 1;
+	Modes = 0;
+	for (i = 0; i < sPW.length; i++) {
+		//密码模式    
+		Modes |= CharMode(sPW.charCodeAt(i));
+	}
+	return bitTotal(Modes);
+}
+
+//显示颜色    
+function pwStrength(pwd) {
+	var Dfault_color = "#FFF0F5"; //默认颜色  
+	var L_color = "#5599FF"; //低强度的颜色，且只显示在最左边的单元格中  
+	var M_color = "#0066FF"; //中等强度的颜色，且只显示在左边两个单元格中  
+	var H_color = "#0044BB"; //高强度的颜色，三个单元格都显示  
+	var Lcolor, Mcolor, Hcolor, S_level;
+	if (pwd == null || pwd == '') {
+		Lcolor = Mcolor = Hcolor = Dfault_color;
+	} else {
+		S_level = checkStrong(pwd);
+		switch (S_level) {
+			case 0:
+				Lcolor = Mcolor = Hcolor = Dfault_color;
+				break;
+			case 1:
+				Lcolor = L_color;
+				Mcolor = Hcolor = Dfault_color;
+				break;
+			case 2:
+				Lcolor = L_color;
+				Mcolor = M_color;
+				Hcolor = Dfault_color;
+				break;
+			default:
+				Lcolor = L_color;
+				Mcolor = M_color;
+				Hcolor = H_color;
+		}
+	}
+	document.getElementById("strength_L").style.background = Lcolor;
+	document.getElementById("strength_M").style.background = Mcolor;
+	document.getElementById("strength_H").style.background = Hcolor;
+	return;
+}
+
+///////////////////////////////
+
+var obj = document.getElementById("bbsPW");
+
+obj.onkeyup = function(){
+	pwStrength(obj.value);
+};
+
+obj.onblur = function(){
+	pwStrength(obj.value);
+	//alert(obj.value);
+};
+
+</script>  
 
 </body>
 </html>
