@@ -22,6 +22,12 @@
 	$question = $_POST["question"];
 	$answer = $_POST["answer"];
 	$bbsPWP = $question."-".$answer;
+
+	if(!isset($barberShop)||!isset($bbsPW)||!isset($province)||!isset($city)||!isset($question)||!isset($answer)){
+		$url = "bbsRegister.php";
+		header("Location: $url");
+		exit();
+	}
 	
 	if($province == "无" || $city == "无" || empty($city)){
 		echo "<script>alert('请将地址信息输入完整！');location.href='bbsRegister.php';</script>";
