@@ -1,5 +1,5 @@
-<meta charset="utf-8">
 <?php ob_start(); ?>
+<meta charset="utf-8">
 
 <?php 
 	session_start();
